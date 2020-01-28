@@ -1,18 +1,39 @@
 <!DOCTYPE html>
+<html lang="ja">
+<meta charset="utf-8" />
 
-<html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>my-first-website</title>
-  <LINK href="styles.css" rel="stylesheet" type="text/css">
-</head>
+<title>仏教</title>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+
+<script>
+var min = 0 ;
+var max = 58 ;
+var name = Math.floor( Math.random() * (max + 1 - min) ) + min ;
+$(document).ready( function() {
+	$.getJSON("js/database.json" , function(data) {
+
+    $("#database b").text(data[name].Category);
+    $("#database dt").text(data[name].Tag);
+    $("#database a").text(data[name].単語);
+    $("#database dx").text(data[name].ふりがな);
+		$("#database dd").text(data[name].説明);
+
+	});	
+});
+</script>
 
 <body>
+  <input type="button" value="ランダム" onclick="window.location.reload(false);" />
 
-<img src="https://octodex.github.com/images/daftpunktocat-thomas.gif" id="octocat" alt="octocat-gif" />
+<h1 id="database"><b></b></h1>
+<dl id="database">
+  <dt></dt>
+  <a></a>
+  (<dx></dx>)
+  <dd></dd>
+</dl>
 
-<!-- Change this code here by copy and pasting your template on line 15 -->
-<p>komazawa!</p>
+
 
 </body>
 </html>
