@@ -6,34 +6,23 @@
 <script type="text/javascript" src="js/jquery.min.js"></script>
 
 <script>
-var min = 0 ;
-var max = 58 ;
-var name = Math.floor( Math.random() * (max + 1 - min) ) + min ;
+var i=0;
+
 $(document).ready( function() {
 	$.getJSON("js/database.json" , function(data) {
 
-    $("#database b").text(data[name].Category);
-    $("#database dt").text(data[name].Tag);
-    $("#database a").text(data[name].単語);
-    $("#database dx").text(data[name].ふりがな);
-		$("#database dd").text(data[name].説明);
-
+    $("#database"+[i]).text(data[i].Category);
+    $("#database"+[i]).text(data[i].Tag);
+    $("#database"+[i]).text(data[i].単語);
+    $("#database"+[i]).text(data[i].ふりがな);
+		$("#database"+[i]).text(data[i].説明);
+    while(i<100){
+      document.write(data[i].単語.big().bold());
+      document.write(" ("+data[i].ふりがな+")"+"<br>");
+      document.write(data[i].説明+"<br>");
+      document.write(data[i].Tag.small().fontcolor("blue")+"<br>"+"<br>");
+    i=i+1;}
 	});	
 });
 </script>
-
-<body>
-  <input type="button" value="ランダム" onclick="window.location.reload(false);" />
-
-<h1 id="database"><b></b></h1>
-<dl id="database">
-  <dt></dt>
-  <a></a>
-  (<dx></dx>)
-  <dd></dd>
-</dl>
-
-
-
-</body>
 </html>
