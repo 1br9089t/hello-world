@@ -1,28 +1,110 @@
 <!DOCTYPE html>
 <html lang="ja">
 <meta charset="utf-8" />
-
 <title>仏教</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
 <script type="text/javascript" src="js/jquery.min.js"></script>
 
 <script>
-var i=0;
 
+document.getElementById("Checkbox1").checked = true;
+
+function Randomizer(){
+  radiobtn1 = document.getElementById("Radio1");
+  radiobtn2 = document.getElementById("Radio2");
+  checkbox1 = document.getElementById("Checkbox1");
+  checkbox1.checked = true;
+  if (checkbox1.checked == true) {
+	document.getElementById('database2').style.display = "none";
+  document.getElementById('database3').style.display = "";}
+
+else if (checkbox1.checked == false) {
+  document.getElementById('database2').style.display = "";
+  document.getElementById('database3').style.display = "none";}
+  
+
+if (radiobtn1.checked == true) {
+	chinese_z();}
+
+else if (radiobtn2.checked == true) {
+  india_b();}
+
+}
+
+function bbb(){
+  checkbox1 = document.getElementById("Checkbox1");
+
+if (checkbox1.checked == true) {
+	document.getElementById('database2').style.display = "none";
+  document.getElementById('database3').style.display = "";}
+
+else if (checkbox1.checked == false) {
+  document.getElementById('database2').style.display = "";
+  document.getElementById('database3').style.display = "none";}
+
+}
+
+function chinese_z(){
+checkbox1 = document.getElementById("Checkbox1");
+var min = 0 ;
+var max = 58 ;
+var name = Math.floor( Math.random() * (max + 1 - min) ) + min ;
 $(document).ready( function() {
-	$.getJSON("js/database.json" , function(data) {
+ $.getJSON("js/chinese_z.json" , function(data) {
 
-    $("#database"+[i]).text(data[i].Category);
-    $("#database"+[i]).text(data[i].Tag);
-    $("#database"+[i]).text(data[i].単語);
-    $("#database"+[i]).text(data[i].ふりがな);
-		$("#database"+[i]).text(data[i].説明);
-    while(i<100){
-      document.write(data[i].単語.big().bold());
-      document.write(" ("+data[i].ふりがな+")"+"<br>");
-      document.write(data[i].説明+"<br>");
-      document.write(data[i].Tag.small().fontcolor("blue")+"<br>"+"<br>");
-    i=i+1;}
-	});	
+    $("#database b").text(data[name].Category);
+    $("#database dt").text(data[name].Tag);
+    $("#database a").text(data[name].単語);
+    $("#database dx").text(data[name].ふりがな);
+    $("#database2 dd").text(data[name].説明);
+    $("#database3 dd").text(data[name].穴埋め);
+ }); 
 });
+}
+
+
+function india_b(){
+var min = 0 ;
+var max = 1 ;
+var name = Math.floor( Math.random() * (max + 1 - min) ) + min ;
+$(document).ready( function() {
+ $.getJSON("js/india_b.json" , function(data) {
+
+    $("#database b").text(data[name].Category);
+    $("#database dt").text(data[name].Tag);
+    $("#database a").text(data[name].単語);
+    $("#database dx").text(data[name].ふりがな);
+    $("#database2 dd").text(data[name].説明);
+    $("#database3 dd").text(data[name].穴埋め);
+
+ }); 
+});
+}
 </script>
+
+
+<input id="Radio1" name="Category"type="radio" value="a" checked> 中国禅宗史
+<input id="Radio2" name="Category" type="radio" value="b"> インド仏教史
+
+
+<body>
+  
+<h1 id="database"><b></b></h1>
+<dl id="database">
+  <dt></dt>
+  <a></a>
+  <dx></dx>
+  <dd></dd>
+  <dn></dn>
+</dl>
+<dl id="database2">
+  <dd></dd>
+</dl>
+<dl id="database3">
+  <dd></dd>
+</dl>
+<input id="Button1" type="button" value="Randomizer" onclick="Randomizer()" class="button2"/>
+<input id="Checkbox1" type="checkbox" value="Hide" onclick="bbb()" />
+<label for="Checkbox1" class="label">&nbsp;&nbsp;&nbsp;Hide&nbsp;&nbsp;&nbsp;</label>
+</body>
 </html>
