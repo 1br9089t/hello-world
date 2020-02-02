@@ -28,7 +28,6 @@ document.getElementById("Checkbox1").checked = true;
 function Randomizer(){
   radiobtn1 = document.getElementById("Radio1");
   radiobtn2 = document.getElementById("Radio2");
-  radiobtn3 = document.getElementById("Radio3");
   checkbox1 = document.getElementById("Checkbox1");
   checkbox1.checked = true;
   if (checkbox1.checked == true) {
@@ -47,9 +46,7 @@ else if (radiobtn2.checked == true) {
   india_b();}
 
 else if (radiobtn3.checked == true) {
-  buddhism_i();}
-
-
+　beginner_b();} 
 }
 
 function bbb(){
@@ -103,13 +100,14 @@ $(document).ready( function() {
  }); 
 });
 }
+	
 
-function buddhism_i(){
+function beginner_b(){
 var min = 0 ;
-var max = 1 ;
+var max = 0 ;
 var name = Math.floor( Math.random() * (max + 1 - min) ) + min ;
 $(document).ready( function() {
- $.getJSON("js/buddhism_i.json" , function(data) {
+ $.getJSON("js/beginner_b.json" , function(data) {
 
     $("#database b").text(data[name].Category);
     $("#database2 dt").text(data[name].Tag);
@@ -121,9 +119,7 @@ $(document).ready( function() {
 
  }); 
 });
-}
-
-
+}	
 </script>
 
 <header>
@@ -136,11 +132,11 @@ $(document).ready( function() {
   インド仏教史
 </label>
 <span class="gyo2"></span>
-<input id="Radio3" name="Category"type="radio" value="c" class="radio-inline__input3">
+<input id="Radio3" name="Category"type="radio" value="a" class="radio-inline__input3">
 <label class="radio-inline__label" for="Radio3">
   仏教学入門
 </label>
-<input id="Radio4" name="Category" type="radio" value="d" class="radio-inline__input4">
+<input id="Radio4" name="Category" type="radio" value="b" class="radio-inline__input4">
 <label class="radio-inline__label" for="Radio4">
   準備中
 </label>
