@@ -53,11 +53,12 @@ $(document).ready( function() {
  $.getJSON("js/chinese_z.json" , function(data) {
 
     $("#database b").text(data[name].Category);
-    $("#database dt").text(data[name].Tag);
-    $("#database a").text(data[name].単語);
-    $("#database dx").text(data[name].ふりがな);
-    $("#database2 dd").text(data[name].説明);
-    $("#database3 dd").text(data[name].穴埋め);
+    $("#database2 dt").text(data[name].Tag);
+    $("#database3 dt").text(data[name].Tag);
+    $("#database rb").text(data[name].単語);
+    $("#database rt").text(data[name].ふりがな);
+    $("#database2 p").text(data[name].説明);
+    $("#database3 p").text(data[name].穴埋め);
  }); 
 });
 }
@@ -71,11 +72,12 @@ $(document).ready( function() {
  $.getJSON("js/india_b.json" , function(data) {
 
     $("#database b").text(data[name].Category);
-    $("#database dt").text(data[name].Tag);
-    $("#database a").text(data[name].単語);
-    $("#database dx").text(data[name].ふりがな);
-    $("#database2 dd").text(data[name].説明);
-    $("#database3 dd").text(data[name].穴埋め);
+    $("#database2 dt").text(data[name].Tag);
+    $("#database3 dt").text(data[name].Tag);
+    $("#database rb").text(data[name].単語);
+    $("#database rt").text(data[name].ふりがな);
+    $("#database2 p").text(data[name].説明);
+    $("#database3 p").text(data[name].穴埋め);
 
  }); 
 });
@@ -83,20 +85,20 @@ $(document).ready( function() {
 </script>
 
 <header>
-<input id="Radio1" name="Category"type="radio" value="a" class="radio-inline__input" checked>
+<input id="Radio1" name="Category"type="radio" value="a" class="radio-inline__input1" checked>
 <label class="radio-inline__label" for="Radio1">
   中国禅宗史
 </label>
-<input id="Radio2" name="Category" type="radio" value="b" class="radio-inline__input">
+<input id="Radio2" name="Category" type="radio" value="b" class="radio-inline__input2">
 <label class="radio-inline__label" for="Radio2">
   インド仏教史
 </label>
-<span class="gyo2">&nbsp;</span>
-<input id="Radio3" name="Category"type="radio" value="a" class="radio-inline__input" checked>
+<span class="gyo2"></span>
+<input id="Radio3" name="Category"type="radio" value="a" class="radio-inline__input3">
 <label class="radio-inline__label" for="Radio3">
   Null
 </label>
-<input id="Radio4" name="Category" type="radio" value="b" class="radio-inline__input">
+<input id="Radio4" name="Category" type="radio" value="b" class="radio-inline__input4">
 <label class="radio-inline__label" for="Radio4">
   Null
 </label>
@@ -104,25 +106,28 @@ $(document).ready( function() {
 
 <body>
   
-<h1 id="database"><b></b></h1>
-<dl id="database">
-  <dt></dt>
-  <a></a>
-  <dx></dx>
-  <dd></dd>
-  <dn></dn>
+<div class="box3">
+<dl id="database" >
+<ruby>
+  <rb></rb>
+  <rt></rt>
+</ruby>
 </dl>
 <dl id="database2">
-  <dd></dd>
+  <p></p>
+  <dt></dt>
 </dl>
 <dl id="database3">
-  <dd></dd>
+  <p></p>
+  <dt></dt>
 </dl>
+
+</div>
+
 <footer>
 <p>
   <input id="Checkbox1" type="checkbox" value="Hide" onclick="bbb()" />
 <label for="Checkbox1" class="label">Hide</label>
-
 </p>
 
 <span class="gyo">&nbsp;</span>

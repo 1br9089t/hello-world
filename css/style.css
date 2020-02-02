@@ -1,11 +1,58 @@
 body {
     color: #ffffff;
     background-color: #000000;
+    
 }
 
 input[type=checkbox] {
-    display: none; /* checkboxを非表示にする */     
+    display: none;
 }
+
+.box3 {
+    position: relative;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40%;
+    width: 90%;
+    background: #202020;
+    padding:1%;
+}
+
+.box3 p {
+    color: #ffffff;
+    font-size: 32px;
+    font-family: sans-serif;
+}
+
+.box3 rb {
+    color: #ffffff;
+    font-size: 400%;
+    font-weight: 800;
+    font-family: sans-serif;
+}
+.box3 rt {
+    color: #ffffff;
+    font-size: 200%;
+    font-weight: 400;
+    font-family: sans-serif;
+}
+.box3 dt {
+    color: #808080;
+    text-align: right;
+    font-size: 32px;
+    font-weight: 800;
+    font-family: sans-serif;
+}
+
+
+.sample-box-2 {
+    background-color: #e7efff;
+    color: #1c66fe;
+    margin: 2em 0;
+    padding: 2em;
+}
+
 
 .Button1[type="checkbox"] + label{
     border-radius: 40px;
@@ -77,8 +124,40 @@ header {
     top: 3%;
 }
 
-.radio-inline__input {
+.radio-inline__input1 {
     display: none;
+}
+
+.radio-inline__input1:checked + .radio-inline__label {
+    background: #027367;
+    color: #fff;
+}
+
+.radio-inline__input2 {
+    display: none;
+}
+
+.radio-inline__input2:checked + .radio-inline__label {
+    background: #A60F71;
+    color: #fff;
+}
+
+.radio-inline__input3 {
+    display: none;
+}
+
+.radio-inline__input3:checked + .radio-inline__label {
+    background: #F7931E;
+    color: #fff;
+}
+
+.radio-inline__input4 {
+    display: none;
+}
+
+.radio-inline__input4:checked + .radio-inline__label {
+    background: #219FFE;
+    color: #fff;
 }
 
 .radio-inline__label {
@@ -88,18 +167,10 @@ header {
     font-size: 300%;
     font-weight: 600;
     margin: 2%;
-    padding-left: 1%;
-    padding-right: 1%;
-    padding-top: 1%;
-    padding-bottom: 1%;
+    padding: 1%;
     background: #303030;
     width: 40%;
-    text-align: center;
 }
 
-.radio-inline__input:checked + .radio-inline__label {
-    background: #A60F71;
-    color: #fff;
-    width: 40%;
-}
+
 
