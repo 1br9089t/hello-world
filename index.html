@@ -1,11 +1,26 @@
 <!DOCTYPE html>
 <html lang="ja">
 <meta charset="utf-8" />
-<title>仏教</title>
+<meta name="viewport" content="user-scalable=no, viewport-fit=cover">
+<title>仏教用語辞典</title>
 <link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="apple-touch-icon" sizes="144x144" href="./icon-144.png" />
+<link rel="icon" href="./favicon.ico">
 <script type="text/javascript" src="js/jquery.min.js"></script>
+<link rel="manifest" href="./manifest.json">
 
 <script>
+
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js').then(function(registration) {
+      // 登録成功
+      console.log('ServiceWorker の登録に成功しました。スコープ: ', registration.scope);
+    }).catch(function(err) {
+      // 登録失敗
+      console.log('ServiceWorker の登録に失敗しました。', err);
+    });
+}
+
 
 document.getElementById("Checkbox1").checked = true;
 

@@ -1,0 +1,24 @@
+{
+    "name": "仏教用語辞典",
+    "short_name": "仏教辞典",
+    "lang": "ja-jp",
+    "background_color": "#7d77b4",
+    "theme_color": "#7d77b4",
+    "orientation": "portrait-primary",
+    "description": "仏教用語を確認できるウェブサイトです。",
+    "icons": [{
+        "src": "./icon-256.png",
+        "sizes": "256x256",
+        "type": "image/png"
+      },{
+        "src": "./icon-192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },{
+        "src": "./icon-144.png",
+        "sizes": "144x144",
+        "type": "image/png"
+      }],
+    "start_url": "https://1br9089t.github.io/hello-world/",
+    "display": "standalone"
+  }
