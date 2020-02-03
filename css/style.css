@@ -209,7 +209,7 @@ footer {
 }
 @media screen and (max-width: 1000px) {
     .gyo {
-        line-height: 600%;
+        line-height: 400%;
     }
 }
 @media screen and (max-height: 1800px) {
