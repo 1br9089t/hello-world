@@ -24,7 +24,7 @@ input[type=checkbox] {
     padding:1%;
     box-shadow:0px 0px 20px rgba(0, 0, 0, 0.1) inset;
 }
-@media screen and (max-width: 480px){
+@media screen and (max-width: 1000px){
     .box3 {
         margin-top: 45%;
     }
@@ -61,7 +61,7 @@ input[type=checkbox] {
     font-weight: 800;
     font-family: sans-serif;
 }
-@media screen and (max-width: 480px){
+@media screen and (max-width: 1000px){
     .box3 p {
         font-size: 48px;
     }
@@ -157,7 +157,7 @@ input[type="checkbox"]:checked + label {
     padding-bottom: 1.5%;
     background: #e0e0e0;
 }
-@media screen and (max-width: 480px){
+@media screen and (max-width: 1000px){
     .Button1[type="checkbox"] + label{
         padding-left: 6.2%;
         padding-right: 6.2%;
@@ -207,7 +207,7 @@ footer {
 .gyo {
     line-height: 1000%;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 1000px) {
     .gyo {
         line-height: 400%;
     }
