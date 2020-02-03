@@ -8,8 +8,6 @@ const urlsToCache = [
   'js/jquery.min.js',
   'js/main.js',
   'index.html',
-  'js/chinese_z.json',
-  'js/india_b.json'
 ];
 
 self.addEventListener('install', (event) => {

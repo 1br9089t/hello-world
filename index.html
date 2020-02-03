@@ -22,6 +22,9 @@ if ('serviceWorker' in navigator) {
     });
 }
 
+$(document).ready( function(){
+  Randomizer()
+});
 
 document.getElementById("Checkbox1").checked = true;
 
@@ -48,8 +51,6 @@ else if (radiobtn2.checked == true) {
 
 else if (radiobtn3.checked == true) {
   beginner_b();}
-
-
 }
 
 function bbb(){
@@ -165,6 +166,7 @@ $(document).ready( function() {
 </dl>
 
 </div>
+</body>
 
 <footer>
 <p>
@@ -180,5 +182,5 @@ $(document).ready( function() {
   <label for="Button1" class="label1">Randomizer</label>
 </p>
 </footer>
-</body>
+
 </html>
