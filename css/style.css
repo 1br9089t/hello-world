@@ -18,6 +18,7 @@ input[type=checkbox] {
     text-align: left;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 1%;
     width: 90%;
     background: #fcfcfc;
     padding:1%;
@@ -30,7 +31,7 @@ input[type=checkbox] {
 }
 @media screen and (max-height: 1800px) {
     .box3 {
-        margin-top: 30%;
+        margin-top: 25%;
     }
 }
 
@@ -99,94 +100,65 @@ input[type=checkbox] {
     }
 }
 
-
-
-.sample-box-2 {
-    background-color: #e7efff;
-    color: #1c66fe;
-    margin: 2em 0;
-    padding: 2em;
-}
-
-
 .Button1[type="checkbox"] + label{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    padding-top: .5%;
+    padding-bottom: .5%;
     border-radius: 40px;
+    width: 36%;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 100%;
     font-weight: 600;
-    padding-left: 6.2%;
-    padding-right: 6.2%;
-    padding-top: 1.5%;
-    padding-bottom: 1.5%;
     background: #2980b9;
 }
 
 .Button1[type="checkbox"]:checked + label{
-    border-radius: 40px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 100%;
-    font-weight: 600;
-    padding-left: 6.2%;
-    padding-right: 6.2%;
-    padding-top: 1.5%;
-    padding-bottom: 1.5%;
     background: #2980b9;
 }
 
 input[type="checkbox"]:checked + label {
-    border-radius: 40px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 100%;
-    font-weight: 600;
-    padding-left: 8%;
-    padding-right: 8%;
-    padding-top: 1.5%;
-    padding-bottom: 1.5%;
     background: #7D77B4;
 }
 
 .label {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    padding-top: .5%;
+    padding-bottom: .5%;
     border-radius: 40px;
+    width: 36%;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 100%;
     font-weight: 600;
-    padding-left: 8%;
-    padding-right: 8%;
-    padding-top: 1.5%;
-    padding-bottom: 1.5%;
     background: #e0e0e0;
 }
 @media screen and (max-width: 1000px){
     .Button1[type="checkbox"] + label{
         font-size: 300%;
-        padding-left: 6.2%;
-        padding-right: 6.2%;
-        padding-top: 2.5%;
-        padding-bottom: 2.5%;
+        padding-top: 2%;
+        padding-bottom: 2%;
     }
     
     .Button1[type="checkbox"]:checked + label{
         font-size: 300%;
-        padding-left: 6.2%;
-        padding-right: 6.2%;
-        padding-top: 2.5%;
-        padding-bottom: 2.5%;
+        
     }
     
     input[type="checkbox"]:checked + label {
         font-size: 300%;
-        padding-left: 15%;
-        padding-right: 15%;
-        padding-top: 2.5%;
-        padding-bottom: 2.5%;
     }
     
     .label {
         font-size: 300%;
-        padding-left: 15%;
-        padding-right: 15%;
-        padding-top: 2.5%;
-        padding-bottom: 2.5%;
+        padding-top: 2%;
+        padding-bottom: 2%;
     }
 }
 @media (prefers-color-scheme: dark) {
@@ -199,11 +171,11 @@ footer {
     width: 100%;
     position: fixed;
     text-align: center;
-    bottom: 10%;
+    bottom: 8%;
 }
 @media screen and (max-height: 1800px) {
     footer {
-        bottom: 2%;
+        bottom: 1%;
     }
 }
 
@@ -212,35 +184,20 @@ footer {
 }
 @media screen and (max-width: 1000px) {
     .gyo {
-        line-height: 400%;
+        line-height: 200%;
     }
 }
 @media screen and (max-height: 1800px) {
     .gyo {
-        line-height: 200%;
+        display: none;
     }
 }
-
-.gyo2 {
-        line-height: 600%;
-}
-
 
 header {
     width: 100%;
     position: fixed;
     text-align: center;
-    top: 0%;
-}
-@media screen and (max-width: 1000px) {
-    header {
-        top: 1%;
-    }
-}
-@media screen and (max-height: 1800px) {
-    header {
-        top: 1%;
-    }
+    top: 1%;
 }
 
 .radio-inline__input1 {
@@ -288,8 +245,8 @@ header {
 }
 @media screen and (max-width: 1000px) {
     .radio-inline__label {
-        font-size: 300%;
-        margin: 2%;
+        font-size: 200%;
+        margin: 1%;
         padding: 1%;
         width: 40%;
     }
