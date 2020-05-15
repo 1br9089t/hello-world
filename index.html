@@ -32,6 +32,7 @@ function Randomizer(){
   radiobtn1 = document.getElementById("Radio1");
   radiobtn2 = document.getElementById("Radio2");
   radiobtn3 = document.getElementById("Radio3");
+  radiobtn4 = document.getElementById("Radio4");
   checkbox1 = document.getElementById("Checkbox1");
   checkbox1.checked = true;
   if (checkbox1.checked == true) {
@@ -51,6 +52,9 @@ else if (radiobtn2.checked == true) {
 
 else if (radiobtn3.checked == true) {
   beginner_b();}
+
+else if (radiobtn4.checked == true) {
+  chinese_b();}
 }
 
 function bbb(){
@@ -69,7 +73,7 @@ else if (checkbox1.checked == false) {
 function chinese_z(){
 checkbox1 = document.getElementById("Checkbox1");
 var min = 0 ;
-var max = 58 ;
+var max = 72 ;
 var name = Math.floor( Math.random() * (max + 1 - min) ) + min ;
 $(document).ready( function() {
  $.getJSON("js/chinese_z.json" , function(data) {
@@ -107,10 +111,29 @@ $(document).ready( function() {
 
 function beginner_b(){
 var min = 0 ;
-var max = 100 ;
+var max = 187 ;
 var name = Math.floor( Math.random() * (max + 1 - min) ) + min ;
 $(document).ready( function() {
  $.getJSON("js/beginner_b.json" , function(data) {
+
+    $("#database b").text(data[name].Category);
+    $("#database2 dt").text(data[name].Tag);
+    $("#database3 dt").text(data[name].Tag);
+    $("#database rb").text(data[name].単語);
+    $("#database rt").text(data[name].ふりがな);
+    $("#database2 p").text(data[name].説明);
+    $("#database3 p").text(data[name].穴埋め);
+
+ }); 
+});
+}
+
+function chinese_b(){
+var min = 0 ;
+var max = 29 ;
+var name = Math.floor( Math.random() * (max + 1 - min) ) + min ;
+$(document).ready( function() {
+ $.getJSON("js/chinese_b.json" , function(data) {
 
     $("#database b").text(data[name].Category);
     $("#database2 dt").text(data[name].Tag);
@@ -143,7 +166,7 @@ $(document).ready( function() {
 </label>
 <input id="Radio4" name="Category" type="radio" value="d" class="radio-inline__input4">
 <label class="radio-inline__label" for="Radio4">
-  準備中
+  中国仏教史
 </label>
 </header>
 
